@@ -1,258 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>연남 가라오케 예약 | 블로그 - 전문가 칼럼</title>
-    <meta name="description" content="연남동 대표 가라오케, 합리적인 가격과 프리미엄 사운드 시스템. 전문가 분석: 최적의 음향 환경을 위한 가이드. 예약은 010-6279-0862.">
-    <meta name="keywords" content="연남 가라오케, 연남동 가라오케, 연남 가라오케 예약, 연남동 노래방, 연남 가라오케 추천, 가라오케 예약, 연남동 단체룸, 블로그">
-    <link rel="canonical" href="https://t3b06-yn-karaoke-rsv.vercel.app/blog">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-raw-concrete">
-    <!-- Open Graph -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="연남 가라오케 예약 | 연남동 프리미엄 가라오케 블로그">
-    <meta property="og:description" content="연남동 대표 가라오케, 합리적인 가격과 프리미엄 사운드 시스템. 전문가 분석: 최적의 음향 환경을 위한 가이드.">
-    <meta property="og:url" content="https://t3b06-yn-karaoke-rsv.vercel.app/blog">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:site_name" content="연남 가라오케 예약">
-    <meta property="article:published_time" content="2025-04-15T09:00:00+09:00">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- CSS 핵심 (동일) -->
-    <style>
-        /* Brutalist-Avantgarde 시스템: KR-RAW-CONCRETE 테마 */
-        :root {
-            --bg: #f5f0ec;
-            --text: #1a1a1a;
-            --accent: #c73e3e;
-            --border: #2b2b2b;
-            --font-main: 'IBM Plex Mono', 'Noto Sans KR', monospace;
-            --font-head: 'Unbounded', 'Noto Sans KR', sans-serif;
-            --space: 1.5rem;
-            --max-w: 1280px;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: var(--font-main);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
-        }
-        .site-wrapper {
-            max-width: var(--max-w);
-            margin: 0 auto;
-            padding: 0 var(--space);
-        }
-        /* 헤더 & 네비게이션 */
-        header {
-            border-bottom: 4px solid var(--border);
-            padding: 1.2rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo a {
-            font-family: var(--font-head);
-            font-weight: 700;
-            font-size: 1.6rem;
-            text-decoration: none;
-            color: var(--text);
-            letter-spacing: -0.04em;
-        }
-        .logo a span { color: var(--accent); }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            padding: 0.25rem 0.5rem;
-            border-bottom: 2px solid transparent;
-            transition: all 0.15s;
-        }
-        nav a:hover, nav a.active {
-            border-bottom-color: var(--accent);
-            color: var(--accent);
-        }
-        /* 햄버거 메뉴 (모바일) */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        .hamburger span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: var(--text);
-            border-radius: 2px;
-        }
-        /* 블로그 메인 */
-        .blog-post {
-            padding: var(--space) 0;
-        }
-        .blog-post article {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .post-meta {
-            font-size: 0.85rem;
-            color: #555;
-            border-left: 4px solid var(--accent);
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .post-meta time { font-weight: 600; }
-        h1 {
-            font-family: var(--font-head);
-            font-size: 2.4rem;
-            line-height: 1.2;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-        }
-        h2 {
-            font-family: var(--font-head);
-            font-size: 1.6rem;
-            margin-top: 2.5rem;
-            margin-bottom: 0.75rem;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 0.3rem;
-        }
-        h3 {
-            font-family: var(--font-head);
-            font-size: 1.2rem;
-            margin-top: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            margin-bottom: 1.2rem;
-            font-size: 1rem;
-        }
-        blockquote {
-            border-left: 6px solid var(--accent);
-            background: #e8e2db;
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            font-style: normal;
-            font-weight: 500;
-        }
-        .data-highlight {
-            background: var(--border);
-            color: var(--bg);
-            padding: 0.5rem 1rem;
-            display: inline-block;
-            font-family: var(--font-head);
-            font-weight: 700;
-            margin: 0.5rem 0;
-        }
-        ul {
-            margin: 1rem 0 1.5rem 2rem;
-        }
-        ul li { margin-bottom: 0.4rem; }
-        .img-placeholder {
-            background: #d9d2cb;
-            border: 3px solid var(--border);
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-head);
-            font-weight: 600;
-            color: #333;
-            margin: 1.5rem 0;
-        }
-        .footer-note {
-            border-top: 2px solid var(--border);
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            font-size: 0.9rem;
-        }
-        /* 반응형 */
-        @media (max-width: 768px) {
-            header { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
-            nav ul { flex-direction: column; width: 100%; display: none; }
-            nav ul.open { display: flex; }
-            .hamburger { display: flex; }
-            h1 { font-size: 1.8rem; }
-            .img-placeholder { height: 200px; }
-        }
-        /* 푸터 (공통) */
-        footer {
-            border-top: 4px solid var(--border);
-            padding: 1.5rem 0;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #444;
-        }
-        footer a { color: var(--accent); text-decoration: none; }
-    </style>
+<meta charset="UTF-8">
+<title>연남 가라오케 블로그 - 인사이트와 팁</title>
+<meta name="description" content="연남 가라오케 예약에 관한 깊이 있는 정보를 제공하는 블로그. 인원·시간·목적별 선택 기준과 현장에서 바로 활용 가능한 팁을 확인하세요.">
+<meta name="keywords" content="연남 가라오케, 가라오케 예약, 연남 노래방, 블로그, 팁">
+<link rel="canonical" href="https://yeonnam-song-tip.program-school.online/blog.html">
+<meta property="og:title" content="연남 가라오케 블로그 - 인사이트와 팁">
+<meta property="og:description" content="연남 가라오케 예약에 관한 깊이 있는 정보를 제공하는 블로그. 인원·시간·목적별 선택 기준과 현장에서 바로 활용 가능한 팁을 확인하세요.">
+<meta property="og:url" content="https://yeonnam-song-tip.program-school.online/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <div class="site-wrapper">
-        <header>
-            <div class="logo">
-                <a href="/">연남<span>karaoke</span></a>
-            </div>
-            <button class="hamburger" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('open')">
-                <span></span><span></span><span></span>
-            </button>
-            <nav>
-                <ul>
-                    <li><a href="/">홈</a></li>
-                    <li><a href="/pricing">가격</a></li>
-                    <li><a href="/reservation">예약</a></li>
-                    <li><a href="/blog" class="active">블로그</a></li>
-                    <li><a href="/contact">연락처</a></li>
-                </ul>
-            </nav>
-        </header>
+<header class="container">
+  <h1 class="q-txt-dmp3">연남 가라오케 블로그</h1>
+</header>
 
-        <main class="blog-post">
-            <article>
-                <div class="post-meta">
-                    <time datetime="2025-04-15">2025.04.15</time> · 작성자: 연남음향연구소
-                </div>
-                <h1>연남 가라오케가 프리미엄 사운드를 고집하는 이유: 객관적 데이터로 분석한 음향 최적화</h1>
+<nav class="container">
+  <ul class="menu">
+    <li><a href="/">홈</a></li>
+    <li><a href="/reserve">예약하기</a></li>
+    <li><a href="/locations">위치</a></li>
+    <li><a href="/blog">블로그</a></li>
+    <li><a href="/contact">문의</a></li>
+  </ul>
+</nav>
 
-                <p>서울 마포구 연남동은 독특한 문화적 에너지와 함께 프리미엄 엔터테인먼트 공간이 밀집한 지역이다. 그중에서도 <strong>연남 가라오케</strong>는 ‘싸게 부르는 노래방’이 아닌, 전문 음향 시스템을 갖춘 공연형 가라오케라는 포지셔닝으로 빠르게 입지를 다지고 있다. 본 칼럼에서는 객관적인 음향 측정 데이터와 업계 벤치마크를 바탕으로 연남 가라오케의 사운드 퀄리티가 왜 차별화되는지 분석한다.</p>
+<main class="container">
+  <section class="q-top-e7ks">
+    <h2 class="q-txt-dmp3">왜 연남 가라오케인가?</h2>
+    <p>연남은 도심 속 한가운데서도 사람들의 눈을 사로잡는 독특한 분위기를 유지한다. 그곳의 가라오케는 단순히 노래를 부르는 공간이 아니라, 소리와 조명이 만든 작은 무대다. 우리는 평범한 선택지를 거부하고, 현장의 에너지와 맞닿은 결정을 강조한다. 이 페이지는 그런 결정을 돕기 위한 실전 가이드다.</p>
+    <p>가라오케를 선택할 때 가장 중요한 건 “누구와 언제”라는 맥락이다. 같은 방이라도 4인의 소규모 모임과 20인이 동시에 파티를 즐기는 경우는 전혀 다른 요구사항을 만든다. 아래에서는 상황별로 반드시 점검해야 할 기준을 상세히 제시한다.</p>
+  </section>
 
-                <div class="img-placeholder">[측정 차트: 연남 가라오케 객실 주파수 응답 곡선 (20Hz–20kHz)]</div>
+  <section class="q-top-e7ks">
+    <h2 class="q-txt-dmp3">인원 규모에 따른 방 선택 전략</h2>
+    <p>소규모(2~4인) 모임은 프라이버시와 음향 집중도가 핵심이다. 작은 방은 외부 소음이 최소화되고, 개인적인 대화와 노래가 동시에 가능하도록 설계돼 있다. 이때는 방 내부의 마이크 감도와 사운드 이퀄라이저 옵션을 먼저 확인하라.</p>
+    <p>중대형(5~12인) 그룹은 공간 활용과 좌석 배치가 관건이다. 방 크기가 충분히 넓어야 모두가 편안히 서거나 앉아 노래를 즐길 수 있다. 또한, 다채로운 조명 모드와 대형 스크린이 있는 방을 선택하면 파티 분위기를 한층 끌어올릴 수 있다.</p>
+    <p>대규모(13인 이상) 파티는 완전한 파티룸 형태가 필요하다. 방마다 최대 인원 제한이 다르므로 사전 확인이 필수다. 동시에 여러 노래를 동시에 재생할 수 있는 멀티 디제이 모드와 음량 조절 구역이 있는지 살펴라. 예약 시 전용 파티 관리자를 요청하면 현장에서 발생할 수 있는 혼란을 최소화한다.</p>
+  </section>
 
-                <h2>1. 룸 어쿠스틱: RT60 잔향 시간과 명료도의 상관관계</h2>
-                <p>가라오케의 음질을 결정하는 가장 중요한 물리적 요소는 잔향 시간(RT60)이다. 한국산업표준(KS C 9302)에 따르면 일반 노래방의 권장 RT60은 0.4~0.6초이나, 연남 가라오케는 전 객실을 0.35±0.05초로 튜닝했다. 이는 음성 명료도(D50)를 92% 이상 유지하기 위한 엔지니어링 결정이다.</p>
-                <blockquote>
-                    “RT60 0.35초는 라이브 클럽 스튜디오 수준입니다. 긴 잔향은 음악의 웅장함을 주지만, 가사의 명료도를 떨어뜨립니다. 연남 가라오케는 명료도와 음악적 풍부함의 정확한 균형점을 찾았습니다.”<br>
-                    <span style="display:block; margin-top:0.5rem; font-size:0.85rem;">— 한국음향학회 K.A.S. 세미나 발췌 (2024)</span>
-                </blockquote>
+  <section class="q-top-e7ks">
+    <h2 class="q-txt-dmp3">시간대와 목적에 맞는 기준 체크리스트</h2>
+    <p>야간(22시 이후) 이용자는 방음 설비와 주변 소음 규제가 핵심이다. 방음이 미흡하면 이웃과 갈등이 발생할 수 있다. 따라서 “소음 차단 등급” 표시가 있는 방을 우선 고려하라. 또한, 야간 할인을 제공하는 매장은 가격 대비 가치를 높일 수 있다.</p>
+    <p>주간(오전 10시~오후 6시) 회식이나 팀 빌딩 목적이라면, 다목적 룸과 프로젝트용 모니터가 구비된 방을 선택한다. 화면에 프레젠테이션을 띄우고 동시에 노래를 부를 수 있는 하이브리드 환경이 필요하다면, 해당 기능이 있는지 미리 물어보는 것이 중요하다.</p>
+    <p>특정 테마(레트로, 힙합, 발라드) 파티를 기획한다면, 방 안에 장착된 사운드 이펙트와 조명 색상 프로파일을 확인한다. 맞춤형 조명이 있다면 사전 설정 파일을 업로드해 분위기를 즉시 연출할 수 있다.</p>
+  </section>
 
-                <h2>2. 스피커 시스템: 라인 어레이 VS 포인트 소스</h2>
-                <p>연남 가라오케의 모든 룸은 2웨이 라인 어레이 스피커를 채택했다. 단일 포인트 소스 대비 라인 어레이는 수직 커버리지가 균일하여, 방 안의 모든 청취 위치에서 ±1.5dB 이내의 음압 편차를 보인다. 실제 측정 결과, 중앙 좌석과 벽면 좌석 간 SPL 차이는 2dB 미만으로 일반 노래방의 6~9dB 편차에 비해 현저히 낮았다.</p>
+  <section class="q-top-e7ks">
+    <h2 class="q-txt-dmp3">가라오케 선택 시 반드시 확인해야 할 핵심 항목</h2>
+    <p>① <strong>노래 데이터베이스 최신성</strong> – 최신 히트곡이 빠르게 업데이트되는지, 원하는 곡이 실제로 존재하는지를 확인한다. 방마다 곡 검색 속도가 다를 수 있으니 체험판으로 테스트해보라.</p>
+    <p>② <strong>음향 장비 사양</strong> – 마이크 감도, 스피커 출력, 이퀄라이저 옵션을 직접 청취해보고, 원하는 사운드 프로파일에 맞는지 판단한다.</p>
+    <p>③ <strong>가격 구조와 부가 비용</strong> – 기본 요금 외에 시간 초과료, 음료 패키지, 추가 마이크 비용 등을 명확히 파악한다. 투명한 가격 정책을 가진 곳이 신뢰할 만하다.</p>
+    <p>④ <strong>청결과 위생 관리</strong> – 마이크와 손잡이 소독 여부, 방 내부 청소 주기를 체크한다. 특히 코로나 이후 위생 관리가 강화된 곳을 선택하는 것이 현명하다.</p>
+  </section>
 
-                <div class="data-highlight">데이터 포인트: 15개 측정 위치 평균 SPL 88dB ± 1.4dB (C-가중, 1kHz)</div>
+  <section class="r-foot-idbp">
+    <h2 class="q-txt-dmp3">FAQ</h2>
+    <div class="n-item-lprv">
+      <h3>Q) 예약 시 최소 인원 제한이 있나요?</h3>
+      <p>A) 대부분의 방은 최소 2인부터 이용 가능하지만, 특수 테마룸은 최소 4인 이상을 요구한다. 예약 단계에서 인원 제한을 반드시 확인하라.</p>
+    </div>
+    <div class="n-item-lprv">
+      <h3>Q) 노래 선택이 안 될 때는 어떻게 해야 하나요?</h3>
+      <p>A) 시스템 오류 시 담당 직원에게 바로 요청하면 즉시 재시작하거나 다른 방으로 이동시켜준다. 사전 예약 시 비상 연락처를 남겨두는 것이 좋다.</p>
+    </div>
+    <div class="n-item-lprv">
+      <h3>Q) 야간에 소음 제한이 있나요?</h3>
+      <p>A) 연남 지역은 23시 이후 소음 규제가 강화된다. 방음 등급이 높은 방을 선택하거나, 조용한 시간대에 이용하면 문제가 없으며, 이때는 야간 할인을 제공하는 경우가 많다.</p>
+    </div>
+  </section>
+</main>
 
-                <h3>2.1 주파수 응답 평탄도</h3>
-                <p>30Hz~16kHz 구간에서 측정된 주파수 응답은 ±3dB 이내로, 이는 THX Ultra2 인증 기준(±3dB)에 준하는 수준이다. 저음역(60~120Hz)은 약 2dB 부스트되어 발라드와 힙합 장르에서 풍부한 펀치감을 제공하면서도, 250Hz 부근의 ‘먹먹함’을 억제하는 EQ 커브가 적용되었다.</p>
-
-                <h2>3. 마이크와 보컬 프로세싱: 피드백 억제와 다이내믹 레인지</h2>
-                <p>연남 가라오케는 Sennheiser EW-D 시리즈 디지털 마이크를 도입하여 2.4ms의 초저지연과 134dB 다이내믹 레인지를 확보했다. 내장된 피드백 억제기는 3중 노치 필터로 0.1초 이내에 하울링을 제거한다. 임상 테스트에서 95%의 사용자가 ‘마이크 울림 없이 깨끗하다’고 응답했다.</p>
-
-                <ul>
-                    <li><strong>마이크 주파수 응답:</strong> 80Hz~18kHz (±1.5dB)</li>
-                    <li><strong>최대 SPL (1m):</strong> 125dB (피크)</li>
-                    <li><strong>THD+N:</strong> 0.03% 미만 (@1kHz, 94dB SPL)</li>
-                </ul>
-
-                <h2>4. 객관적 비교: 연남 가라오케 vs 국내 프랜차이즈 평균</h2>
-                <p>2025년 1월,
+<footer class="container">
+  <p>&copy; 2026 연남 가라오케 가이드. 모든 권리 보유.</p>
+</footer>
 </body>
 </html>
